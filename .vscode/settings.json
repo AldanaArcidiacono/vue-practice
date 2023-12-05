@@ -1,0 +1,153 @@
+{
+  "files.eol": "\n",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.printWidth": 140,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "yaml.schemas": {
+    "file:///c%3A/Users/Bornan/.vscode/extensions/atlassian.atlascode-3.0.9/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+  },
+  "cSpell.userWords": ["axios", "bornan", "rythmic"],
+  "aws.telemetry": false,
+  "editor.formatOnSave": true,
+  "git.openRepositoryInParentFolders": "always",
+  "editor.linkedEditing": true,
+  "editor.guides.bracketPairs": true,
+
+  // Color & Icons Theme
+  "workbench.colorTheme": "SynthWave '84",
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Vibrancy settings
+  "vscode_vibrancy.opacity": "0.8",
+  "terminal.integrated.gpuAcceleration": "off",
+
+  // Font Settings
+  "editor.fontFamily": "'MonoLisa', 'Cascadia Code'",
+  "editor.fontWeight": "bold",
+  "editor.lineHeight": 20,
+  "editor.fontSize": 13,
+  "editor.fontLigatures": "'calt' on, 'liga' on, 'zero' on, 'ss02' on",
+  "editor.tokenColorCustomizations": {
+    // Text changes for italics
+    "textMateRules": [
+      {
+        "name": "italic font",
+        "scope": [
+          "comment",
+          "keyword",
+          "storage",
+          "keyword.control",
+          "keyword.control.from",
+          "keyword.control.flow",
+          "keyword.operator.new",
+          "keyword.control.import",
+          "keyword.control.export",
+          "keyword.control.default",
+          "keyword.control.trycatch",
+          "keyword.control.conditional",
+          "storage.type",
+          "storage.type.class",
+          "storage.modifier.tsx",
+          "storage.type.function",
+          "storage.modifier.async",
+          "variable.language",
+          "variable.language.this",
+          "variable.language.super",
+          "meta.class",
+          "meta.var.expr",
+          "constant.language.null",
+          "support.type.primitive",
+          "entity.name.method.js",
+          "entity.other.attribute-name",
+          "punctuation.definition.comment",
+          "text.html.basic entity.other.attribute-name",
+          "tag.decorator.js entity.name.tag.js",
+          "tag.decorator.js punctuation.definition.tag.js",
+          "source.js constant.other.object.key.js string.unquoted.label.js"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ],
+    // Theme changes
+    "[SynthWave '84]": {
+      // SynthWave '84 Colors:
+      // Orange "#ff8b39"
+      // Yellow "#fede5d"
+      // Purple "#d436d4"
+      // Pink "#ff7edb"
+
+      "textMateRules": [
+        {
+          // Component's tags
+          "scope": "support.class.component.vue",
+          "settings": {
+            "foreground": "#ff0693"
+          }
+        },
+        {
+          // Json left property
+          "scope": "support.type.property-name.json",
+          "settings": {
+            "foreground": "#d436d4"
+          }
+        }
+      ]
+    }
+  },
+
+  // Size of terminal
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.lineHeight": 1,
+
+  // One DarkPro
+  "oneDarkPro.vivid": true,
+  "oneDarkPro.bold": true,
+
+  // SynthWave 84'
+  "synthwave84.brightness": 0.45,
+
+  // Cursor
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "expand",
+  "workbench.productIconTheme": "fluent-icons",
+  "totalTypeScript.hideAllTips": false,
+  "totalTypeScript.hideBasicTips": false,
+  "workbench.startupEditor": "none",
+  "totalTypeScript.hiddenTips": [
+    "ts-object-type",
+    "basic-types",
+    "type-alias-declaration",
+    "variable-type-annotation",
+    "typeof",
+    "passing-generics-to-types",
+    "returntype-utility-type",
+    "typing-function-parameters",
+    "array-type",
+    "non-null-expression",
+    "interface-declaration",
+    "partial-utility-type",
+    "function-return-type",
+    "optional-object-property",
+    "union-type",
+    "null-keyword",
+    "literal-type"
+  ],
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "terminal.integrated.env.windows": {},
+  "window.titleBarStyle": "custom",
+  "console-ninja.featureSet": "Community",
+  "window.zoomLevel": -1
+}
