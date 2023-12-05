@@ -1,16 +1,16 @@
 <template>
-  <div class="container">
-    <h1>APP</h1>
-    <h2>Mis posts favs: {{ fav }}</h2>
+  <LoadingSpinner v-if="loading" />
+
+  <div class="container" v-else>
+    <h1>Harry Potter WIKI</h1>
+    <h2>My favorite Wizard: {{ fav }}</h2>
 
     <PaginationPost @prevAction="prevAction" @nextAction="nextAction" :start="start" :end="end" :maxLength="maxLength" class="mb-2" />
 
-    <BlogPost
-      v-for="post in posts.slice(start, end)"
-      :key="post.id"
-      :title="post.title"
-      :id="post.id"
-      :body="post.body"
+    <WizardPost
+      v-if="wizardingWorld"
+      v-for="wizard of wizardingWorld.personajes.slice(start, end)"
+      :wizard="wizard"
       @favHandler="changeFav"
       class="mb-2"
     />
@@ -18,21 +18,23 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
-import BlogPost from "./components/BlogPost.vue";
+import { ref, computed, onMounted } from "vue";
+import WizardPost from "./components/WizardPosts.vue";
 import PaginationPost from "./components/PaginationPost.vue";
+import LoadingSpinner from "./components/LoadingSpinner.vue";
 
-const posts = ref([]);
 const fav = ref("");
+const loading = ref(true);
+const wizardingWorld = ref([]);
 
-const postPerPage = 10;
+const postPerPage = 5;
 const start = ref(0);
 const end = ref(postPerPage);
 
-const maxLength = computed(() => posts.value.length);
+const maxLength = computed(() => wizardingWorld.value.personajes.length);
 
-const changeFav = (title) => {
-  fav.value = title;
+const changeFav = (nickName) => {
+  fav.value = nickName;
 };
 
 const nextAction = () => {
@@ -45,7 +47,14 @@ const prevAction = () => {
   end.value = end.value - postPerPage;
 };
 
-fetch("https://jsonplaceholder.typicode.com/posts")
-  .then((resp) => resp.json())
-  .then((data) => (posts.value = data));
+const fetchData = () => {
+  fetch("https://harry-potter-api.onrender.com/db")
+    .then((resp) => resp.json())
+    .then((data) => (wizardingWorld.value = data))
+    .finally(() => (loading.value = false));
+};
+
+onMounted(async () => {
+  fetchData();
+});
 </script>
